@@ -108,7 +108,7 @@ The system integrates with external tools via MCP:
 
 ## Example Output
 
-The system generates structured research summaries:
+The system generates structured research summaries and you can find the sample output execution doc -> results_analysis.docx
 
 ```
 === RESEARCH SUMMARY ===
@@ -125,4 +125,5 @@ Key Findings:
 Conclusion: AI is transforming healthcare through improved diagnostics...
 Generated at: 2025-11-01 16:21:53
 ```
+
 
