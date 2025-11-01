@@ -1,0 +1,43 @@
+2025-11-01 16:21:49,538 - src.mcp_tools - INFO - MCP Tool Server starting...
+2025-11-01 16:21:49,538 - src.mcp_tools - INFO - MCP Server started with tools: ['web_search', 'data_analysis', 'content_summarization', 'fact_verification']
+2025-11-01 16:21:49,538 - src.mcp_research_agent - INFO - MCP tools initialized successfully
+2025-11-01 16:21:49,538 - src.enhanced_orchestrator - INFO - Using MCP-Enhanced Research Agent
+2025-11-01 16:21:49,547 - src.enhanced_orchestrator - INFO - Enhanced Multi-Agent System Initialized
+2025-11-01 16:21:49,547 - src.enhanced_orchestrator - INFO - Integration Methods: CrewAI + Message Queue + MCP
+2025-11-01 16:21:49,547 - src.enhanced_orchestrator - INFO - Starting enhanced pipeline for: 'Artificial intelligence in healthcare'
+2025-11-01 16:21:49,547 - src.enhanced_orchestrator - INFO - 
+        INTEGRATION METHODS DEMONSTRATED:
+        
+        1. AGENT FRAMEWORK (CrewAI):
+           - Using CrewAI Agent class for all agents
+           - Agent roles, goals, and backstories defined
+           - Built-in task execution and delegation
+        
+        2. COMMUNICATION PROTOCOL (Message Queue):
+           - Custom MessageQueue class for inter-agent communication
+           - Structured AgentMessage format
+           - Async message passing with logging
+        
+        3. MCP (Model Context Protocol):
+           - MCPToolServer for external tool integration
+           - Standardized tool execution interface
+           - External resource access via MCP
+        
+2025-11-01 16:21:49,547 - src.mcp_research_agent - INFO - MCP Research Agent starting work on: Artificial intelligence in healthcare
+2025-11-01 16:21:49,547 - src.mcp_tools - INFO - Executing MCP tool: web_search with params: {'query': 'latest developments in Artificial intelligence in healthcare'}
+2025-11-01 16:21:49,547 - src.mcp_tools - INFO - Executing MCP tool: data_analysis with params: {'data': 'Research data about Artificial intelligence in healthcare'}
+2025-11-01 16:21:49,547 - src.communication - INFO - mcp_research_agent -> analysis_agent: research_data
+2025-11-01 16:21:49,547 - src.mcp_research_agent - INFO - MCP Research completed and sent to analysis agent
+2025-11-01 16:21:49,547 - src.analysis_agent - INFO - Analysis Agent received research data
+2025-11-01 16:21:49,554 - LiteLLM - INFO - 
+LiteLLM completion() model= llama-3.3-70b-versatile; provider = groq
+2025-11-01 16:21:51,492 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-01 16:21:51,492 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-11-01 16:21:51,515 - src.communication - INFO - analysis_agent -> summary_agent: analysis
+2025-11-01 16:21:51,515 - src.analysis_agent - INFO - Analysis completed and sent to summary agent
+2025-11-01 16:21:51,515 - src.summary_agent - INFO - Summary Agent received analysis data
+2025-11-01 16:21:51,524 - LiteLLM - INFO - 
+LiteLLM completion() model= llama-3.3-70b-versatile; provider = groq
+2025-11-01 16:21:53,001 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-01 16:21:53,001 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-11-01 16:21:53,018 - src.summary_agent - INFO - Summary generation completed for: Artificial intelligence in healthcare
